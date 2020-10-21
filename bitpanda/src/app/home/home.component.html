@@ -1,0 +1,88 @@
+
+
+<!-- <div  class="row row-cols-6 mx-4 justify-content-around">
+	<div *ngFor="let commodities of items.attributes.commodities" class="card-deck col-2 mb-4 p-2">
+
+		<div class="card" style="background-color: " >
+      	   
+	           <div class="card-body">
+	           	<img src="{{commodities.attributes.logo}}" class="card-img-top" alt="Silver">
+	               <h5 class="card-title">{{commodities.attributes.name}}</h5>
+	                 <p class="card-text">{{commodities.attributes.avg_price}} €</p> -->
+					       <!--     <p class="card-text"> Now only for <b>{{x.price}} €</b></p>
+             	</div>
+
+	            
+	  	    
+	 	</div>
+	</div>
+</div> -->
+<div class="jumbotron">
+<table *ngFor="let items of items" class="table table-bordered table-darlk" >
+  <thead>
+    <tr class="bg-info">
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Market Cap</th>
+      <th scope="col">Change-1y</th>
+      <th scope="col">Change-1m</th>
+       <th scope="col">Change-1w</th>
+        <th scope="col">Change-24d</th>
+    </tr>
+  </thead>
+  <tbody>
+  	
+    <tr *ngFor="let commodities of items.attributes.commodities" style="background-color: {{commodities.attributes.color}}">
+      <th scope="row"> <img src="{{commodities.attributes.logo}}">  {{commodities.attributes.symbol}}<br>{{commodities.attributes.name}}</th>
+      <td>{{commodities.attributes.avg_price.substr(0,6)}}</td>
+      <td>{{commodities.attributes.circulating_supply.substr(0,14)}} €</td>
+      <td>{{commodities.attributes.change_1y.substr(0,8)}}</td>
+      <td>{{commodities.attributes.change_1m.substr(0,8)}}</td>
+      <td>{{commodities.attributes.change_1w.substr(0,8)}}</td>
+      <td>{{commodities.attributes.change_24h.substr(0,8)}}</td>
+    </tr>
+     <tr *ngFor="let indexes of items.attributes.indexes" style="background-color: {{indexes.attributes.color}}">
+      <th scope="row"> <img src="{{indexes.attributes.logo}}">  {{indexes.attributes.symbol}}<br>{{indexes.attributes.name}}</th>
+      <td>{{indexes.attributes.avg_price.substr(0,6)}}</td>
+      <td>{{indexes.attributes.circulating_supply.substr(0,14)}} €</td>
+      <td>{{indexes.attributes.change_1y.substr(0,8)}}</td>
+      <td>{{indexes.attributes.change_1m.substr(0,8)}}</td>
+      <td>{{indexes.attributes.change_1w.substr(0,8)}}</td>
+      <td>{{indexes.attributes.change_24h.substr(0,8)}}</td>
+    </tr>
+   
+    
+  </tbody>
+</table>
+</div>
+	<!-- , let i =index -->
+<!-- <tr *ngIf="i==0">
+	<div class="card" style="background-color: {{items.attributes.commodities[i].attributes.color}}" >
+      	   
+	           <div class="card-body">
+	           	<img src="{{items.attributes.commodities[1].attributes.logo}}" class="card-img-top" alt="Silver">
+	               <h5 class="card-title">{{items.attributes.commodities[i].attributes.name}}</h5>
+	                 <p class="card-text">{{items.attributes.commodities[i].attributes.avg_price}}</p>
+					           <p class="card-text"> Now only for <b>{{x.price}} €</b></p>
+             	</div>
+
+	            
+	  	    
+	 	</div>
+
+
+      Here are Commidities:<br> {{getKeys(items.attributes)[6]}}<hr>
+        Here are Crypto:<br> {{getKeys(items.attributes)[7]}}<hr>
+
+          Here are Index:<br> {{getKeys(items.attributes)[9]}}<hr>
+           Here are Fiats:<br>{{getKeys(items.attributes)[10]}}<hr>
+         
+
+  {{getKeys(items.attributes.commodities[0].id)}}
+  {{items.attributes.commodities[0].attributes.name}} -->
+
+
+<hr>
+<!--   <button (click)="sendGetRequest()">GET Users</button> -->
+
+
